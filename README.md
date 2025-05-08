@@ -22,7 +22,11 @@ Add the following to your `MCP` configuration to run the latest version directly
 {
   "mcpServers": {
     "mcp-ip-geo": {
-      "command": "go run github.com/chenmingyong0423/mcp-ip-geo/cmd/mcp-ip-geo@latest"
+      "command": "go",
+      "args": [
+        "run",
+        "github.com/chenmingyong0423/mcp-ip-geo/cmd/mcp-ip-geo@latest"
+      ]
     }
   }
 }
