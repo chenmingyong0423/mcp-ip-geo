@@ -25,7 +25,7 @@ func init() {
 func SingleIpParser() (*protocol.Tool, server.ToolHandlerFunc) {
 	ipApiService := service.NewIpApiService()
 
-	return singleIpParserTool, func(toolRequest *protocol.CallToolRequest) (*protocol.CallToolResult, error) {
+	return singleIpParserTool, func(ctx context.Context, toolRequest *protocol.CallToolRequest) (*protocol.CallToolResult, error) {
 		var req ipRequest
 		if err := protocol.VerifyAndUnmarshal(toolRequest.RawArguments, &req); err != nil {
 			return nil, err

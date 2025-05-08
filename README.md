@@ -68,7 +68,7 @@ You can integrate `mcp-ip-geo` in one of the following ways:
 {
   "mcpServers": {
     "mcp-ip-geo": {
-      "url": "http://host:port/sse"
+      "url": "http://host:port/mcp"
     }
   }
 }

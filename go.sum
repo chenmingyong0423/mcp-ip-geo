@@ -1,5 +1,7 @@
 github.com/ThinkInAIXYZ/go-mcp v0.1.14 h1:CY0O0KClgOgRZrXSSyqX8vAj9gzuu2LULvVY2F6yCaU=
 github.com/ThinkInAIXYZ/go-mcp v0.1.14/go.mod h1:KnUWUymko7rmOgzvIjxwX0uB9oiJeLF/Q3W9cRt8fVg=
+github.com/ThinkInAIXYZ/go-mcp v0.2.2 h1:zlm4Xo8pxGzmfTvN16hM0YP75Q7QZ713g3mZSbO3JAs=
+github.com/ThinkInAIXYZ/go-mcp v0.2.2/go.mod h1:KnUWUymko7rmOgzvIjxwX0uB9oiJeLF/Q3W9cRt8fVg=
 github.com/chenmingyong0423/go-http-chain v1.1.0 h1:Zw9zMLL7Yf0VYFeEo0N6+05wFQyd4PZ10+bPmbQ/sNM=
 github.com/chenmingyong0423/go-http-chain v1.1.0/go.mod h1:Gg/O7EVrW81VXqElJmkoY+Uo5/LU586fpS7LQkLLxaA=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=

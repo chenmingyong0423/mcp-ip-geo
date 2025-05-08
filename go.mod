@@ -3,7 +3,7 @@ module github.com/chenmingyong0423/mcp-ip-geo
 go 1.24.2
 
 require (
-	github.com/ThinkInAIXYZ/go-mcp v0.1.14
+	github.com/ThinkInAIXYZ/go-mcp v0.2.2
 	github.com/chenmingyong0423/go-http-chain v1.1.0
 )
 

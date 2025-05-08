@@ -68,7 +68,7 @@ go install github.com/chenmingyong0423/mcp-ip-geo/cmd/mcp-ip-geo@latest
 {
   "mcpServers": {
     "mcp-ip-geo": {
-      "url": "http://host:port/sse"
+      "url": "http://host:port/mcp"
     }
   }
 }

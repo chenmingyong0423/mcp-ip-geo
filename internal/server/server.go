@@ -13,10 +13,7 @@ func Run(address string) error {
 	if address == "" {
 		ts = transport.NewStdioServerTransport()
 	} else {
-		ts, err = transport.NewSSEServerTransport(address)
-		if err != nil {
-			return err
-		}
+		ts = transport.NewStreamableHTTPServerTransport(address)
 	}
 
 	s, err := server.NewServer(ts)
