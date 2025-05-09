@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"github.com/chenmingyong0423/mcp-ip-geo/internal/server"
 )
 
@@ -12,4 +13,5 @@ func main() {
 	if err := server.Run(*addr); err != nil {
 		panic(err)
 	}
+	fmt.Println("mcp server is running...")
 }
