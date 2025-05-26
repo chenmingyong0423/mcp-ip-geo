@@ -10,5 +10,6 @@ type ToolFunc func() (tool *protocol.Tool, toolHandler server.ToolHandlerFunc)
 func GetToolFuncList() []ToolFunc {
 	return []ToolFunc{
 		SingleIpParser,
+		MultipleIpParser,
 	}
 }

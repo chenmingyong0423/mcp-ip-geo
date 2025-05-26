@@ -4,7 +4,9 @@ go 1.24.2
 
 require (
 	github.com/ThinkInAIXYZ/go-mcp v0.2.12
+	github.com/chenmingyong0423/gkit v0.6.0
 	github.com/chenmingyong0423/go-http-chain v1.1.0
+	golang.org/x/sync v0.14.0
 )
 
 require (
