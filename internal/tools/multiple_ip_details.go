@@ -16,7 +16,7 @@ type multipleIpRequest struct {
 
 func init() {
 	var err error
-	multipleIpParserTool, err = protocol.NewTool("multiple-ip-details", "a tool that provides IPs geolocation information", singleIpRequest{})
+	multipleIpParserTool, err = protocol.NewTool("multiple-ip-details", "a tool that provides IPs geolocation information", multipleIpRequest{})
 	if err != nil {
 		panic(err)
 	}
