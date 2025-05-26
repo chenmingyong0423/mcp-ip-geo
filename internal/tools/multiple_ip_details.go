@@ -3,35 +3,34 @@ package tools
 import (
 	"context"
 	"encoding/json"
-
 	"github.com/ThinkInAIXYZ/go-mcp/protocol"
 	"github.com/ThinkInAIXYZ/go-mcp/server"
 	"github.com/chenmingyong0423/mcp-ip-geo/internal/service"
 )
 
-var singleIpParserTool *protocol.Tool
+var multipleIpParserTool *protocol.Tool
 
-type singleIpRequest struct {
-	Ip string `json:"ip"`
+type multipleIpRequest struct {
+	Ips []string `json:"ips"`
 }
 
 func init() {
 	var err error
-	singleIpParserTool, err = protocol.NewTool("single-ip-details", "a tool that provides IP geolocation information", singleIpRequest{})
+	multipleIpParserTool, err = protocol.NewTool("multiple-ip-details", "a tool that provides IPs geolocation information", singleIpRequest{})
 	if err != nil {
 		panic(err)
 	}
 }
 
-func SingleIpParser() (*protocol.Tool, server.ToolHandlerFunc) {
+func MultipleIpParser() (*protocol.Tool, server.ToolHandlerFunc) {
 	ipApiService := service.NewIpApiService()
 
-	return singleIpParserTool, func(ctx context.Context, toolRequest *protocol.CallToolRequest) (*protocol.CallToolResult, error) {
-		var req singleIpRequest
+	return multipleIpParserTool, func(ctx context.Context, toolRequest *protocol.CallToolRequest) (*protocol.CallToolResult, error) {
+		var req multipleIpRequest
 		if err := protocol.VerifyAndUnmarshal(toolRequest.RawArguments, &req); err != nil {
 			return nil, err
 		}
-		resp, err := ipApiService.GetLocation(context.Background(), req.Ip)
+		resp, err := ipApiService.BatchGetLocation(context.Background(), req.Ips)
 		if err != nil {
 			return nil, err
 		}

@@ -16,3 +16,9 @@ type IpApiResponse struct {
 	Org         string  `json:"org"`
 	As          string  `json:"as"`
 }
+
+type IpApiRequestBody struct {
+	Query  string `json:"query"`
+	Fields string `json:"fields"`
+	Lang   string `json:"lang"`
+}
